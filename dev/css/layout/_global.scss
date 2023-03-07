@@ -1,0 +1,129 @@
+.wrapper {
+    max-width: 500px;
+    border-radius: 10px;
+    margin: 0 auto;
+    // margin-top: 50px;
+    position: relative;
+    color: #fff;
+}
+
+body {
+    background: url(../img/background.jpg) center/cover;
+    height: 100vh;
+    font-family: "Segoe UI",Tahoma,Geneva,Verdana,sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    background: linear-gradient(80deg, rgba(35,30,96,1) 52%, rgba(29,253,111,1) 92%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .85;
+}
+
+small {
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+}
+
+.ask {
+    padding: 10px 25px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 500px;
+    animation: appear .3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    transition: .3s all ease-in-out;
+}
+
+.ask label {
+    margin-bottom: 10px;
+    display: inline-block;
+    font-family: "Raleway",sans-serif;
+    font-size: 30px;
+    display: block;
+    font-weight: 100;
+}
+
+.ask input {
+    width: 100%;
+    border: 0;
+    padding: 15px 30px;
+    font-family: "Segoe UI",Tahoma,Geneva,Verdana,sans-serif;
+    background: none;
+    border: 1px solid rgba(255,255,255,.9);
+    border-radius: 5px;
+    outline: none;
+    color: rgba(255,255,255,.9);
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.ask input::placeholder {
+    color: rgba(255,255,255,.9);
+}
+
+.ask button {
+    background: none;
+    padding: 15px 30px;
+    border: 1px solid rgba(255,255,255,.9);
+    color: #fff;
+    width: 50%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s all ease-in-out;
+    text-transform: uppercase;
+    align-self: center; 
+}
+
+.profile {
+    max-width: 400px;
+    width: 90%;
+    margin: 0 auto;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+    padding: 0 50px 50px;
+    border-radius: 15px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(350%, -50%);
+    transition: .3s all ease-in-out;
+    &__pic {
+        width: 150px;
+        height: 150px;
+        background-position: center;
+        background-size: cover;
+        border-radius: 50%;
+        border: 5px solid rgba(0,0,0,.5);
+        transform: translateY(-50%);
+    }
+    &__name {
+        font-family: "Raleway",sans-serif;
+        font-size: 25px;
+        margin-top: -40px;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        i {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+            opacity: .5;
+            transition: .3s all ease-in-out; 
+        }
+    }
+}
