@@ -33,6 +33,7 @@ function checkStorage() {
     if (localStorage.getItem("name") == null || localStorage.getItem("avatar") == null) {
         displayAsk();
     } else {
+        ask.style.display = "none";
         displayProfile();
     }
     console.log(localStorage);
